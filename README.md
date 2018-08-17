@@ -34,6 +34,12 @@ _This is a list of expected behaviors order from simplest to most complex.  When
   *	Input Example: “310”, “Eritosthanes”
   *	Output Example: “I'm sorry, Eritosthanes. I'm afraid I can't do that.”
 
+## Further Exploration
+
+_The application went above and beyond the assignment to convert the number input to binary and to hexidecimal._
+
+Binary conversion finds the nearest lower binary logarithm of the inputed number and starts from there.  Hexidecimal conversion chunks the binary into units of four and converts each into a hexidecimal character.
+
 
 ## Setup/Installation Requirements
 
