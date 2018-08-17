@@ -5,8 +5,13 @@
 
 // User Interface
 $(function(){
-  $(".submit").click(function(event){
+  $(".userInput").submit(function(event){
     event.preventDefault();
-
+      var numInput = $("#numInput").val();
+      var result = ""
+      if (numInput.includes("0")){
+        result = "Beep!"
+      }
+      $(".result").text(result);
   })
 })
