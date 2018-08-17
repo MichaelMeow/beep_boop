@@ -26,6 +26,24 @@ function result(number, name){
 
 // I finished very early, and my program is clearer and more efficient without any loops (I'm guessing the assignment was designed for us to loop through the numbers in the input in order to find our 0's, 1's and 3's?  The .includes method is much simpler and allows priority for 3 over 1 over 0 a lot easier.)  So I decided to try the binary and hexidecimal translator, which I can use loops to program and show I have understood the concepts.
 
+// Binary translator - proud of this one
+
+function binaryConverter(number){
+  if(number){
+  var binaryLog = Math.floor(Math.log2(number))
+  var binaryArray = new Array(binaryLog).fill(0);
+    while(number>0){
+      binaryLog = Math.floor(Math.log2(number))
+      binaryArray[binaryLog] = 1
+      number = number - Math.pow(2,binaryLog)
+    }
+  var reversedArray = binaryArray.reverse();
+  var result = reversedArray.join("");
+  console.log(result);
+  return result
+}
+}
+
 
 
 
@@ -36,5 +54,6 @@ $(function(){
     var numInput = $("#numInput").val();
     var userName = firstName($("#userName").val());
     $(".result").text(result(numInput, userName));
+    $(".binary").text(binaryConverter(numInput));
   })
 })
