@@ -1,4 +1,4 @@
-[# HAL](https://michaelmeow.github.io/beep_boop)
+# [HAL](https://michaelmeow.github.io/beep_boop)
 
 #### _A website that emulates AI antagonist HAL, 8/17/18_
 

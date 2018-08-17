@@ -6,23 +6,30 @@
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/scripts.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css" type="text/css">
   <meta charset="utf-8">
   <title>HAL</title>
 </head>
 <body>
+
   <div class="container">
+    <div class="col-md-12 text-center">
     <h1>Welcome to HAL.</h1>
+    <div class="hal">
+      (<span id = "eye">O</span>)
+    </div>
     <form class="userInput" action="index.html" method="post">
-      Please enter your name:
+      <label for="userName">Please enter your name:</label><br>
       <input type="text" id="userName" value=""><br>
-      Please enter a number:
+      <label for="numInput">Please enter a number:</label><br>
       <input type="number" id="numInput" value=""><br>
-      <button type="submit" name="submit">Submit</button>
+      <button type="submit" name="submit" class="btn btn-outline-warning">Submit</button>
+      </div>
     </form>
     <div class="result">
     </div>
   </div>
+
 </body>
 </html>

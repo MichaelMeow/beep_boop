@@ -1,0 +1,27 @@
+h1, .result {
+  margin-top: 150px;
+  text-align: center;
+}
+
+.hal {
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 5em;
+}
+
+body {
+  color: white;
+  background-image: url("../img/stars.png");
+  background-color: #000;
+
+
+}
+
+label, input, button{
+  display: block;
+  margin: auto;
+}
+
+#eye{
+  color: red;
+}
