@@ -4,7 +4,7 @@ body {
   background-color: #000;
 }
 
-h1, .result {
+h1, .result, .binary, .hex {
   margin-top: 100px;
   text-align: center;
 }
@@ -22,9 +22,4 @@ h1, .result {
 label, input, button{
   display: block;
   margin: auto;
-}
-.binary{
-  margin: 100px;
-  text-align: center;
-  font-family: Impact;
 }

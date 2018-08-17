@@ -39,10 +39,53 @@ function binaryConverter(number){
     }
   var reversedArray = binaryArray.reverse();
   var result = reversedArray.join("");
-  console.log(result);
   return result
 }
 }
+
+// Now to hexidecimal
+
+function hexConverter(number){
+  var binaryArray = binaryConverter(number).split("");
+  var addZeroes = 4 - (binaryArray.length % 4)
+  var hexDigitBinary = []
+  var hexDigitDecimal = 0
+  var decimals = []
+    for (;addZeroes>0; addZeroes -= 1){
+    binaryArray.unshift(0);
+  }
+  for (i=4;i<=binaryArray.length; i+=4){
+    hexDigitBinary = binaryArray.slice(i-4,i)
+    for (j=0; j<4; j++){
+      console.log(hexDigitBinary[j]);
+      if (hexDigitBinary[j] == 1) {
+        hexDigitDecimal += Math.pow(2, (4-(j+1)))
+      }
+    }
+    decimals.push(hexDigitDecimal)
+    hexDigitDecimal = 0
+    }
+    var hex = decimals.map(function(decimal){
+      if (decimal == 10){
+        return "A";
+      } else if (decimal == 11){
+        return "B";
+      } else if (decimal == 12){
+        return "C";
+      } else if (decimal == 13){
+        return "D";
+      } else if (decimal == 14){
+        return "E";
+      } else if (decimal == 15){
+        return "F";
+      } else {
+        return decimal;
+      }
+    })
+    var result = hex.join("")
+    return result;
+  }
+
 
 
 
@@ -55,5 +98,6 @@ $(function(){
     var userName = firstName($("#userName").val());
     $(".result").text(result(numInput, userName));
     $(".binary").text(binaryConverter(numInput));
+    $(".hex").text(hexConverter(numInput));
   })
 })
