@@ -1,28 +1,35 @@
 // Business Logic
 function firstName(name){
-  nameArray = name.split(" ")
-  return nameArray [0]
+  nameArray = name.split(" ");
+  return nameArray [0];
 }
-// Method .includes contains the business logic I needed to meet the expectations
+
+function result(number, name){
+  if (number.includes("3")){
+    if (name){
+      return "I\'m sorry, " + name + ". I\'m afraid I can\'t do that.";
+    } else {
+      return "I\'m sorry, Dave. I\'m afraid I can\'t do that.";
+    }
+  } else if (number.includes("1")){
+    return "Boop!";
+  } else if (number.includes("0")){
+    return "Beep!";
+  } else {
+    if(name){
+      return "What are you doing, " + name + "?";
+    }else {
+      return "What are you doing, Dave?";
+    }
+  }
+}
 
 // User Interface
 $(function(){
   $(".userInput").submit(function(event){
     event.preventDefault();
-      var numInput = $("#numInput").val();
-      var result = ""
-      var userName = firstName($("#userName").val());
-      if (numInput.includes("3")){
-        if (userName){
-        result = "I\'m sorry, " + userName + ". I\'m afraid I can\'t do that."
-        } else {
-        result = "I\'m sorry, Dave. I\'m afraid I can\'t do that."
-        }
-      } else if (numInput.includes("1")){
-        result = "Boop!"
-      } else if (numInput.includes("0")){
-        result = "Beep!"
-      }
-      $(".result").text(result);
+    var numInput = $("#numInput").val();
+    var userName = firstName($("#userName").val());
+    $(".result").text(result(numInput, userName));
   })
 })
