@@ -5,10 +5,11 @@
 // I originally used the .includes method, and then I realized you wanted us to show our knowledge of loops, so I created my own includes function
 function includes(string, search){
   var characters = string.split("");
-  for (i=0; i<characters.length; i++);
-  var character = characters[i];
-  if (character == search){
-    return "true";
+  for (i=0; i<characters.length; i++){
+    var character = characters[i];
+    if (character == search){
+      return "true";
+    }
   }
 }
 
