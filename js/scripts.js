@@ -1,7 +1,6 @@
 // Business Logic
 
-
-
+// Method .includes contains the business logic I needed to meet the expectations
 
 // User Interface
 $(function(){
