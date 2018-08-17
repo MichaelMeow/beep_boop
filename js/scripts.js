@@ -24,6 +24,11 @@ function result(number, name){
   }
 }
 
+// I finished very early, and my program is clearer and more efficient without any loops (I'm guessing the assignment was designed for us to loop through the numbers in the input in order to find our 0's, 1's and 3's?  The .includes method is much simpler and allows priority for 3 over 1 over 0 a lot easier.)  So I decided to try the binary and hexidecimal translator, which I can use loops to program and show I have understood the concepts.
+
+
+
+
 // User Interface
 $(function(){
   $(".userInput").submit(function(event){

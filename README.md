@@ -6,7 +6,7 @@
 
 ## Description
 
-The application takes a name and number and returns different messages depending on the inputs.
+The application takes a name and number and returns different messages depending on the inputs.  Back end logic includes functions using the .includes method to determine if a certain number is in a given input.
 
 ## BDD
 
