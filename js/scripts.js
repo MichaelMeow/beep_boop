@@ -9,7 +9,9 @@ $(function(){
     event.preventDefault();
       var numInput = $("#numInput").val();
       var result = ""
-      if (numInput.includes("0")){
+      if (numInput.includes("1")){
+        result = "Boop!"
+      } else if (numInput.includes("0")){
         result = "Beep!"
       }
       $(".result").text(result);
